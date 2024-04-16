@@ -1,0 +1,67 @@
+ELMEJJAD DIOP Walid Mamadou
+===========================================================================Yams====================================================================================================
+
+------Introduction
+
+Ce projet a pour but de réaliser le jeu Yam's qui sera jouable sur console avec un ou plusieurs utilisateurs.
+
+------Sommaire
+
+    À propos
+    Utilisation
+    Structure des fichiers
+    Choix et conception du projet
+    Crédit/Remerciements
+
+------À propos
+
+L'objectif principal de ce projet est de développer une application console interactive qui permet aux joueurs de lancer des dés, de les garder ou de les relancer, et de calculer leur score 
+en suivant les règles du Yams. Vous pourrez jouer en solo ou avec des amis, en enregistrant les scores de chaque joueur et en déterminant qui est le champion ultime du Yams !
+
+------Utilisation
+
+Lancer le Jeu : Allez dans le répertoire ELMEJJAD_Walid_Mamadou_Diop et exécutez le fichier sln YamsBoonus. Lancez ensuite le jeu avec les commandes qui vous sont proposées.
+
+------Structure des fichiers
+ELMEJJAD_Walid_Mamadou_Diop/
+├─ YamsBoonus/
+│  ├─ joueur.h
+│  ├─ joueur.cpp
+│  ├─ lancer.h
+│  ├─ lancer.cpp
+│  ├─ figure.h
+│  ├─ regles.h
+│  ├─ regles.cpp
+│  ├─ partie.h
+│  ├─ partie.cpp
+│  ├─ ia.h
+│  ├─ ia.cpp
+│  ├─ brelan.h
+│  ├─ carre.h
+│  ├─ chance.h
+│  ├─ full.h
+│  ├─ paire.h
+│  ├─ petite.h
+│  ├─ grande.h
+│  ├─ Somme.h
+│  ├─ yahtzee.h
+│  ├─ savePartie.txt
+├─ Yams_test/
+│  ├─ test.cpp
+├─ YamsBoonus.sln
+├─ lisezmoi.txt
+├─ Presentation Yams.mp4
+
+------Choix et conception du projet 
+std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); -> documentation officielle de cppreference pour éviter les problemes d'entree de l'utilisateur.
+////////////////////////////////////////////////
+std::unique pointer -> On a utilisé le pointeur intelligent unique_pointer pour éviter des fuites mémoires et pour que la desallocation de la memoire soit gérée automatiquement. 
+		       Le but aussi est d'éviter que les objets perdent leurs adresses mémoires lorsque l'on sort d'un scope.
+std::make_unique  -> Pour pouvoir manipuler le unique_pointer.
+////////////////////////////////////////////////////////////////////////
+std::random_device rd;                            }
+std::mt19937 g(rd());                             } -> documentation officielle de cppreference pour trier aléatoirement les éléments dans un vector.
+std::shuffle(ordreFig.begin(), ordreFig.end(), g) } 
+
+------Crédit/Remerciements
+Créateur du sujet de tp : COURILLEAU Nicolas.
